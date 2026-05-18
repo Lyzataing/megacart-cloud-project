@@ -1,23 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MegaCart</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MegaCart — Modern Ecommerce</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <header>
-        <h1>MegaCart</h1>
-        <p>Big Deals Every Day!</p>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#">MegaCart</a>
+            <form class="search" role="search" aria-label="Search products">
+                <input type="search" placeholder="Search for products, brands and more" />
+                <button aria-label="Search">Search</button>
+            </form>
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
+                <span class="sr-only">Menu</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0b1220" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <nav id="primary-nav" class="nav" role="navigation">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#deals">Deals</a>
+                <a class="nav-link" href="#products">Products</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="cart" href="#">Cart (0)</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="banner">
-        <h2>30% OFF Electronics</h2>
-        <button>Shop Now</button>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1>Everything you need — delivered fast</h1>
+                    <p>Top brands, daily deals, and free returns on thousands of items.</p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="#featured">Shop Featured</a>
+                        <a class="btn ghost" href="#categories">Browse Categories</a>
+                    </div>
+                </div>
+                <div class="hero-media" aria-hidden="true">
+                    <img src="images/hero-placeholder.jpg" alt="Shopping illustration" onerror="this.style.opacity=0.8;this.src='https://via.placeholder.com/520x360?text=MegaCart'" />
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories container">
+            <h2>Shop by Category</h2>
+            <div class="grid cols-4">
+                <a class="card category" href="#">Electronics</a>
+                <a class="card category" href="#">Home & Kitchen</a>
+                <a class="card category" href="#">Fashion</a>
+                <a class="card category" href="#">Sports</a>
+            </div>
+        </section>
+
+        <section id="featured" class="featured container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+            <div class="grid cols-4 products">
+                <article class="product card">
+                    <img alt="Product 1" src="https://via.placeholder.com/300x200?text=Product+1" />
+                    <h3>Wireless Headphones</h3>
+                    <p class="price">$79.00 <span class="muted">$99</span></p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+                <article class="product card">
+                    <img alt="Product 2" src="https://via.placeholder.com/300x200?text=Product+2" />
+                    <h3>Smart Watch</h3>
+                    <p class="price">$129.00</p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+                <article class="product card">
+                    <img alt="Product 3" src="https://via.placeholder.com/300x200?text=Product+3" />
+                    <h3>Espresso Machine</h3>
+                    <p class="price">$249.00</p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+                <article class="product card">
+                    <img alt="Product 4" src="https://via.placeholder.com/300x200?text=Product+4" />
+                    <h3>Running Shoes</h3>
+                    <p class="price">$69.00</p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="electronics-sales" class="electronics container">
+            <div class="section-header">
+                <h2>Electronics Sales</h2>
+                <a href="#" class="view-all">See all electronics</a>
+            </div>
+            <div class="grid cols-3 products">
+                <article class="product card">
+                    <div class="badge">-30%</div>
+                    <img alt="Bluetooth Speaker" src="https://via.placeholder.com/400x260?text=Bluetooth+Speaker" />
+                    <h3>Bluetooth Speaker</h3>
+                    <p class="price">$34.99 <span class="muted">$49.99</span></p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+
+                <article class="product card">
+                    <div class="badge">-25%</div>
+                    <img alt="Noise Cancelling Headphones" src="https://via.placeholder.com/400x260?text=Headphones" />
+                    <h3>Noise Cancelling Headphones</h3>
+                    <p class="price">$89.99 <span class="muted">$119.99</span></p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+
+                <article class="product card">
+                    <div class="badge">-20%</div>
+                    <img alt="Portable Charger" src="https://via.placeholder.com/400x260?text=Portable+Charger" />
+                    <h3>Portable Charger 20,000mAh</h3>
+                    <p class="price">$15.99 <span class="muted">$19.99</span></p>
+                    <button class="btn">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter container">
+            <div class="newsletter-inner">
+                <h3>Join our newsletter</h3>
+                <p>Get exclusive deals and early access to sales.</p>
+                <form class="newsletter-form" aria-label="Subscribe to newsletter">
+                    <input type="email" placeholder="Your email address" required />
+                    <button class="btn primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="foot-col">
+                <h4>About MegaCart</h4>
+                <p>Fast shipping, easy returns, and great prices.</p>
+            </div>
+            <div class="foot-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="foot-col">
+                <h4>Follow</h4>
+                <div class="socials">
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">© <span id="year"></span> MegaCart</div>
+    </footer>
 
     <script src="script.js"></script>
+    <script>
+        // small runtime nicety: set copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
